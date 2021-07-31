@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <title>Chatroom</title>
+</head>
+<body>
+
+    <div class="enterName">
+        <form class="getName">
+            Enter a name to be Displayed.
+            <input type="text" class="uname" id="uname" placeholder="Enter a Name">
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+
+    <div class="gridcontainer hide">
+        <div class="left">
+
+        </div>
+        <div class="right">
+        </div>
+        
+        <div class="heading">Chatroom</div>
+        <div class="roomssection">
+            <div class="room selected" id="general">#General</div>
+            <div class="room" id="ott">#OTT</div>
+            <div class="room" id="gaming">#Gaming</div>
+            <div class="room" id="dev">#Dev</div>
+        </div>
+        <div class="namesection">
+            <div class="col">
+            <form class="nameform">
+                <input type="text" name="newName" id="newName" placeholder="change name">
+            </form>
+            <label class="changeName hide">Name changed sucessfully</label>
+            </div>
+        </div>
+        <div class="msgsection">
+            <form class="msgform">
+            <input type="text" name="Nmsg" id="Nmsg" placeholder="Write a message">
+            <input type="submit" value="Send" class="submitbtn">
+        </form></div>
+
+        <div class="chatsection">
+            
+        </div>
+
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC9tdGivRHwJRZuRXQxLCdT29N2g3bmog0",
+        authDomain: "chatroom-b7e30.firebaseapp.com",
+        projectId: "chatroom-b7e30",
+        storageBucket: "chatroom-b7e30.appspot.com",
+        messagingSenderId: "72139475617",
+        appId: "1:72139475617:web:5a933363e700957fd27ee0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+
+    
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/backend.js"></script>
+    <script src="scripts/uiHandler.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.enterName{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getName{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.getName .submit{
+    background-color: rgb(20, 94, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    width: 250px;
+    height: 50px;
+}
+.uname{
+    padding-left: 10px;
+    width: 250px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.getName input{
+    margin: 10;
+}
+.gridcontainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1.3fr 1fr 1.3fr 10fr;
+    grid-template-areas: 
+    "left name right"
+    "left rooms right"
+    "left names right"
+    "left msg right"
+    "left chat right";
+}
+.left{
+    grid-area: left;
+}
+.right{
+    grid-area: right;
+}
+.heading{
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: name;
+    padding: 10 10 10 10;
+}
+.roomssection{
+    padding: 10 0 10 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: rooms;
+}
+.room
+{
+    margin: 0 2% 0 2%;
+    padding: 10 15 10 15;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.selected{
+    background-color: cornflowerblue;
+    color: white;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.namesection{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: names;
+}
+.nameform{
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 15px;
+    margin-right: 5%;
+}
+.nameform input{
+    width: 180px;
+    padding-left: 10px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.hide 
+{
+    display: none !important;
+}
+.changeName{
+    font-size: 10px;
+    color: green;
+    margin-top: -10;
+}
+.msgsection{
+    padding: 10 10 10 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: msg;
+}
+.submitbtn{
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(43, 117, 255);
+}
+.msgform{
+    border: 1px solid gray;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+}
+.msgform input{
+    height: 35px;
+    padding-left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.msgform #Nmsg{
+    width: 240px;
+}
+.chatsection{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(245, 245, 245);
+    grid-area: chat;
+}
+.chat{
+    border: 1px solid gray;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    margin: 10 5 0 5;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.line1{
+    display: flex;
+    margin-bottom: -20px;
+}
+@media (max-width:550px){
+    .gridcontainer{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.3fr 1fr 1.3fr 10fr;
+        grid-template-areas: 
+        "name"
+        "rooms"
+        "names"
+        "msg"
+        "chat";
+    }
+    .left
+    {
+        display: none;
+    }
+    .right
+    {
+        display: none;
+    }
+}
+.name{
+    font-weight: bold;
+}
+.time{
+    font-size: 15px;
+    color: rgb(59, 59, 59);
+}
