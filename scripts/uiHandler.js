@@ -18,6 +18,11 @@ if(localStorage.getItem('uname'))
     gridcontainer.classList.remove("hide");
     enterName.classList.add("hide");
 }
+else
+{
+    gridcontainer.classList.add("hide");
+    enterName.classList.remove("hide");
+}
 
 //dbmanager object  --------------------------------------------
 let newDB = new dbmanager("general",Passuname);
