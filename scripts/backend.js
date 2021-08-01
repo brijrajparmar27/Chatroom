@@ -12,16 +12,10 @@ class dbmanager{
     //update the visited room
     updateRoom(newRoom){
         this.room = newRoom;
-        console.log("room changed to ", this.room);
         if(this.unsub)
         {
             this.unsub();
         }
-
-        //resub
-        // obj.fetchchats((data)=>{
-        //     appendToUI(data);
-        // })
     }
 
     //update the display name
